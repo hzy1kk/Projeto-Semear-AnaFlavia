@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Semear Futuro — projeto de voluntariado da Escola Paulo de Tarso para apoiar crianças em situação de vulnerabilidade.">
+  <title>Semear Futuro | Escola Paulo de Tarso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#inicio" class="marca">
+        <img src="images/logo-escola.svg" alt="Logo Escola Paulo de Tarso" width="52" height="52">
+        <div class="marca-texto">
+          <strong>Semear Futuro</strong>
+          <span>Escola Paulo de Tarso</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#ano-voluntariado">Ano do Voluntariado</a></li>
+        <li><a href="#causa">A Causa</a></li>
+        <li><a href="#projeto">O Projeto</a></li>
+        <li><a href="#inscricao">Inscreva-se</a></li>
+        <li><a href="#desenvolvedor">Desenvolvedor</a></li>
+      </ul>
+      <button type="button" class="btn-tema" id="btnTema" aria-pressed="false">Modo escuro</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+        <div class="hero-conteudo">
+          <span class="hero-badge">Projeto Escola Paulo de Tarso · 2026</span>
+          <h1>Semear Futuro: voluntariado por crianças em vulnerabilidade</h1>
+          <p class="hero-slogan">“Plantamos oportunidades no coração das crianças.”</p>
+          <p>
+            Junte-se à nossa comunidade escolar na arrecadação e montagem de kits escolares e de higiene
+            para crianças em situação de vulnerabilidade social. Sua participação transforma estudo,
+            dignidade e esperança em gestos concretos.
+          </p>
+          <div class="hero-botoes">
+            <a href="#inscricao" class="btn btn-primario">Quero ser voluntário</a>
+            <a href="#projeto" class="btn btn-secundario">Conhecer a ação</a>
+          </div>
+          <div class="contador-voluntarios" aria-live="polite">
+            <span id="totalVoluntarios">0</span>
+            <span>voluntário(s) já inscrito(s)</span>
+          </div>
+        </div>
+        <figure class="hero-imagem">
+          <img
+            src="images/semear-futuro-hero.png"
+            alt="Ilustração de voluntários da escola entregando kits escolares a crianças — imagem gerada por IA"
+            width="560"
+            height="360"
+          >
+        </figure>
+      </div>
+    </section>
+
+    <section id="ano-voluntariado" class="secao">
+      <div class="container">
+        <h2>Ano do Voluntariado 2026</h2>
+        <p class="subtitulo-secao">Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</p>
+        <p>
+          <strong>Voluntariado</strong> é a dedicação de tempo, talento e solidariedade sem remuneração,
+          em benefício da coletividade. Na escola, ele educa para a cidadania, o empatia e a
+          responsabilidade social — competências tão importantes quanto o conteúdo das disciplinas.
+        </p>
+        <p>
+          A <strong>ONU declarou 2026 o Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</strong>,
+          reconhecendo o papel de milhões de pessoas na construção de um mundo mais justo, inclusivo e
+          sustentável, alinhado aos Objetivos de Desenvolvimento Sustentável (ODS).
+        </p>
+        <div class="destaque-box">
+          <p>
+            O projeto <strong>Semear Futuro</strong> responde a esse chamado global com uma ação local:
+            mobilizar a comunidade da <strong>Escola Paulo de Tarso</strong> em favor da infância vulnerável,
+            conectando educação, solidariedade e desenvolvimento sustentável.
+          </p>
+        </div>
+        <p>
+          Ser voluntário em 2026 é plantar hoje o futuro que queremos ver: crianças com material escolar,
+          apoio afetivo e a certeza de que a escola e a comunidade caminham juntas.
+        </p>
+      </div>
+    </section>
+
+    <section id="causa" class="secao">
+      <div class="container">
+        <h2>A causa: infância em vulnerabilidade</h2>
+        <p class="subtitulo-secao">Por que essa causa importa</p>
+        <p>
+          Crianças em <strong>situação de vulnerabilidade social</strong> enfrentam falta de recursos básicos:
+          alimentação inadequada, moradia precária, ausência de material escolar e pouco acesso a cuidados
+          de saúde e higiene. Isso prejudica a frequência escolar, o aprendizado e a autoestima.
+        </p>
+        <p>
+          O público ajudado pelo <strong>Semear Futuro</strong> são crianças de 6 a 14 anos, em parceria
+          com famílias encaminhadas pela escola e por instituições comunitárias da região — sempre com
+          respeito, sigilo e acompanhamento da equipe pedagógica.
+        </p>
+
+        <div class="grid-cards">
+          <article class="card">
+            <p class="numero">32,8%</p>
+            <h3>Pobreza infantil no Brasil</h3>
+            <p>
+              Segundo o IBGE (PNAD Contínua), cerca de um terço das crianças viviam em lares abaixo da
+              linha de pobreza em 2023 — um retrato da urgência de ações solidárias.
+            </p>
+          </article>
+          <article class="card">
+            <p class="numero">1 em 4</p>
+            <h3>Material escolar insuficiente</h3>
+            <p>
+              Pesquisas educacionais apontam que muitas famílias de baixa renda não conseguem comprar
+              todos os itens da lista escolar no início do ano letivo.
+            </p>
+          </article>
+          <article class="card">
+            <p class="numero">100%</p>
+            <h3>Potencial de transformação</h3>
+            <p>
+              Com apoio comunitário, crianças ganham condições de participar da escola com dignidade —
+              e a educação abre portas para um futuro melhor.
+            </p>
+          </article>
+        </div>
+
+        <h3 style="margin-top: 2rem; color: var(--azul);">Você sabia?</h3>
+        <ul>
+          <li>A primeira infância é a fase em que investimentos sociais têm maior retorno para a sociedade.</li>
+          <li>Falta de material escolar é uma das causas de evasão e repetência em contextos de pobreza.</li>
+          <li>Projetos escolares de voluntariado fortalecem valores de empatia e cidadania em todos os alunos.</li>
+          <li>Doar tempo organizando kits ensina planejamento, trabalho em equipe e responsabilidade.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projeto" class="secao">
+      <div class="container">
+        <h2>Projeto concreto: Semear Futuro</h2>
+        <p class="subtitulo-secao">Nome, ação, local, data e participação dos voluntários</p>
+
+        <div class="projeto-grid">
+          <article class="projeto-item">
+            <div class="projeto-icone" aria-hidden="true">1</div>
+            <div>
+              <h3>Nome e objetivo</h3>
+              <p>
+                <strong>Semear Futuro</strong> — arrecadar e montar kits com material escolar, higiene e
+                lanche para crianças em vulnerabilidade, com a comunidade da Escola Paulo de Tarso.
+              </p>
+            </div>
+          </article>
+          <article class="projeto-item">
+            <div class="projeto-icone" aria-hidden="true">2</div>
+            <div>
+              <h3>O que será realizado</h3>
+              <p>
+                Campanha interna de arrecadação (cadernos, lápis, sabonete, pasta de dente, meias, etc.)
+                e um mutirão para separar, embalar e etiquetar os kits com carinho e organização.
+              </p>
+            </div>
+          </article>
+          <article class="projeto-item">
+            <div class="projeto-icone" aria-hidden="true">3</div>
+            <div>
+              <h3>Onde</h3>
+              <p>Salão multiuso e pátio coberto da <strong>Escola Paulo de Tarso</strong>.</p>
+            </div>
+          </article>
+          <article class="projeto-item">
+            <div class="projeto-icone" aria-hidden="true">4</div>
+            <div>
+              <h3>Quando</h3>
+              <p>
+                <strong>Coleta:</strong> 1º a 15 de agosto de 2026 (durante o horário escolar).<br>
+                <strong>Mutirão:</strong> sábado, 22 de agosto de 2026, das 8h às 12h.
+              </p>
+            </div>
+          </article>
+          <article class="projeto-item">
+            <div class="projeto-icone" aria-hidden="true">5</div>
+            <div>
+              <h3>O que os voluntários farão na prática</h3>
+              <ul class="lista-tarefas">
+                <li>Divulgar a campanha nas turmas e redes da escola;</li>
+                <li>Receber e organizar doações no ponto de coleta;</li>
+                <li>Conferir itens e montar kits por faixa etária;</li>
+                <li>Embalar, etiquetar e apoiar a entrega simbólica das doações;</li>
+                <li>Registrar presença e ajudar na limpeza do espaço ao final.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="inscricao" class="secao">
+      <div class="container">
+        <h2>Inscrição de voluntários</h2>
+        <p class="subtitulo-secao">Preencha o formulário e faça parte do Semear Futuro</p>
+
+        <div id="msgJaInscrito" class="mensagem-aviso" role="status"></div>
+        <div id="msgSucesso" class="mensagem-sucesso" role="status"></div>
+
+        <form id="formVoluntario" class="formulario" novalidate>
+          <div class="campo" id="campoNome">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" maxlength="80">
+            <span class="msg-erro" id="erroNome" hidden></span>
+          </div>
+          <div class="campo" id="campoIdade">
+            <label for="idade">Idade *</label>
+            <input type="number" id="idade" name="idade" required min="14" max="99">
+            <span class="msg-erro" id="erroIdade" hidden></span>
+          </div>
+          <div class="campo" id="campoEmail">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <span class="msg-erro" id="erroEmail" hidden></span>
+          </div>
+          <div class="campo" id="campoItens">
+            <label for="itensArrecadar">Quantos itens da lista você pode ajudar a arrecadar? *</label>
+            <select id="itensArrecadar" name="itensArrecadar" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1-3">De 1 a 3 itens</option>
+              <option value="4-7">De 4 a 7 itens</option>
+              <option value="8+">8 itens ou mais</option>
+              <option value="apenas-tempo">Só posso ajudar com tempo no mutirão</option>
+            </select>
+            <span class="msg-erro" id="erroItens" hidden></span>
+          </div>
+          <button type="submit" class="btn btn-primario" style="width: 100%;">Enviar inscrição</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+          Suas inscrições são salvas no navegador (localStorage) para contagem e para evitar duplicidade por e-mail.
+        </p>
+      </div>
+    </section>
+
+    <section id="desenvolvedor" class="secao">
+      <div class="container">
+        <h2>Desenvolvedor do site</h2>
+        <div class="dev-grid">
+          <figure class="dev-foto">
+            <img src="images/desenvolvedor.svg" alt="Foto representativa do desenvolvedor — substitua por sua foto" width="200" height="200">
+          </figure>
+          <div>
+            <p><strong>Nome:</strong> [Seu nome ou nome do grupo]</p>
+            <p><strong>Turma:</strong> [Ex.: 2º ano do Ensino Médio — Turma A]</p>
+            <p><strong>Escola:</strong> Escola Paulo de Tarso</p>
+            <div class="tech-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <p>
+              Este site foi desenvolvido como projeto de Desenvolvimento Web, com layout responsivo,
+              paleta institucional (laranja, branco e azul), seções exigidas pela atividade e uso de
+              <strong>localStorage</strong> para registrar inscrições de voluntários, exibir o contador
+              no hero e lembrar se o visitante já se inscreveu pelo mesmo e-mail. A ilustração principal
+              do hero foi criada com inteligência artificial, alinhada ao tema da campanha.
+            </p>
+            <p>
+              <em>Personalize esta seção com seu nome, turma e foto real antes da apresentação.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p><strong>Semear Futuro</strong> · Escola Paulo de Tarso · Projeto de Voluntariado 2026</p>
+    <p>Desenvolvimento Web — HTML, CSS e JavaScript puro.</p>
+    <p>&copy; 2026 Escola Paulo de Tarso. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
