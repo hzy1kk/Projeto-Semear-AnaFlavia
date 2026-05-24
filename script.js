@@ -359,6 +359,37 @@
     }
   }
 
+
+  /* ——— Menu mobile ——— */
+  var navToggle = document.getElementById("navToggle");
+  var navMenu = document.getElementById("navMenu");
+
+  function fecharMenu() {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.remove("aberto");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Abrir menu");
+    document.body.classList.remove("menu-aberto");
+  }
+
+  function abrirFecharMenu() {
+    if (!navMenu || !navToggle) return;
+    var aberto = navMenu.classList.toggle("aberto");
+    navToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
+    navToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+    document.body.classList.toggle("menu-aberto", aberto);
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", abrirFecharMenu);
+    navMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", fecharMenu);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1101) fecharMenu();
+    });
+  }
+
   /* ——— Event listeners ——— */
   if (btnTema) {
     btnTema.addEventListener("click", function () {

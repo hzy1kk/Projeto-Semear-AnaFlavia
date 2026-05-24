@@ -16,24 +16,35 @@
   <header class="cabecalho" id="cabecalho">
     <nav class="nav" aria-label="Menu principal">
       <a href="#inicio" class="marca">
-        <img class="marca-logo" src="images/escola/logo-colegio.png" alt="Logo Colégio Paulo de Tarso" width="180" height="56">
+        <img class="marca-logo" src="images/escola/logo-colegio.png" alt="Logo Colégio Paulo de Tarso" width="180" height="56">
         <div class="marca-texto">
-          <strong>Semear Futuro</strong>
-          <span>Escola Paulo de Tarso</span>
+          <strong>Semear Futuro</strong>
+          <span>Colégio Paulo de Tarso</span>
         </div>
       </a>
-      <ul class="nav-links">
-        <li><a href="#escola" data-nav>Escola</a></li>
-        <li><a href="#ano-voluntariado" data-nav>Voluntariado</a></li>
-        <li><a href="#causa" data-nav>Causa</a></li>
-        <li><a href="#projeto" data-nav>Projeto</a></li>
-        <li><a href="#inscricao" data-nav>Inscreva-se</a></li>
-        <li><a href="#desenvolvedor" data-nav>Dev</a></li>
-      </ul>
-      <button type="button" class="btn-tema" id="btnTema" aria-pressed="false">
-        <span class="btn-tema-icone" aria-hidden="true">◐</span>
-        <span class="btn-tema-texto">Escuro</span>
-      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#escola" data-nav>Escola</a></li>
+          <li><a href="#ano-voluntariado" data-nav>Voluntariado</a></li>
+          <li><a href="#causa" data-nav>Causa</a></li>
+          <li><a href="#projeto" data-nav>Projeto</a></li>
+          <li><a href="#inscricao" data-nav>Inscrição</a></li>
+          <li><a href="#desenvolvedor" data-nav>Autoria</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-acoes">
+        <button type="button" class="btn-tema" id="btnTema" aria-pressed="false">
+          <span class="btn-tema-icone" aria-hidden="true">◐</span>
+          <span class="btn-tema-texto">Escuro</span>
+        </button>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </nav>
   </header>
 
