@@ -11,8 +11,8 @@
   --azul-glow: #4a8bb8;
   --azul-soft: #eef4f9;
   --branco: #ffffff;
-  --bg: #fff9f5;
-  --bg-alt: #fceee3;
+  --bg: #ffefe3;
+  --bg-alt: #ffe4d1;
   --bg-elevated: #ffffff;
   --surface: #ffffff;
   --text: #0c2340;
@@ -2228,71 +2228,92 @@ body.tema-escuro .destaque-box {
   border-color: var(--laranja-line);
 }
 
-/* ═══ Mais laranja no fundo ═══ */
+
+/* ═══ Fundo quase monocromático laranja ═══ */
+:root {
+  --azul-soft: #ffe8d6;
+}
+
 body {
-  background-color: #fff6f0;
+  background-color: #ffead8;
   background-image:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(232, 149, 80, 0.22), transparent 50%),
-    radial-gradient(ellipse 80% 60% at 100% 50%, rgba(212, 98, 42, 0.1), transparent 45%),
-    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(212, 98, 42, 0.08), transparent 40%);
+    radial-gradient(ellipse 140% 100% at 50% -30%, rgba(244, 160, 97, 0.45), transparent 55%),
+    radial-gradient(ellipse 100% 80% at 0% 50%, rgba(212, 98, 42, 0.2), transparent 50%),
+    radial-gradient(ellipse 100% 80% at 100% 80%, rgba(196, 88, 32, 0.18), transparent 50%),
+    linear-gradient(180deg, #fff0e4 0%, #ffead8 35%, #ffe2cc 100%);
   background-attachment: fixed;
 }
 
 .hero {
   background:
-    radial-gradient(ellipse 100% 90% at 80% 10%, rgba(232, 149, 80, 0.28), transparent 55%),
-    radial-gradient(ellipse 90% 70% at 10% 90%, rgba(212, 98, 42, 0.18), transparent 50%),
-    linear-gradient(180deg, #fff3e8 0%, #fff9f5 55%, #fff6f0 100%) !important;
+    radial-gradient(ellipse 110% 100% at 70% 0%, rgba(232, 149, 80, 0.5), transparent 60%),
+    radial-gradient(ellipse 90% 80% at 0% 100%, rgba(212, 98, 42, 0.35), transparent 55%),
+    linear-gradient(180deg, #ffd9bc 0%, #ffefe3 45%, #ffead8 100%) !important;
 }
 
-.hero-bg .orb-1 {
-  opacity: 0.22;
-  background: radial-gradient(circle at 30% 30%, rgba(244, 160, 97, 0.9), var(--azul-deep));
-}
-
-.hero-bg .orb-2 {
-  opacity: 0.35;
-}
-
+.hero-bg .orb-1,
+.hero-bg .orb-2,
 .hero-bg .orb-3 {
-  opacity: 0.18;
-  background: radial-gradient(circle, var(--laranja-soft), var(--laranja));
+  background: radial-gradient(circle at 35% 35%, var(--laranja-glow), var(--laranja-deep));
+  opacity: 0.4;
+}
+
+.hero-bg .grid-3d {
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(212, 98, 42, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 98, 42, 0.07) 1px, transparent 1px);
 }
 
 .secao {
-  background: rgba(255, 252, 249, 0.85);
+  background: rgba(255, 236, 220, 0.72);
+  border-top-color: rgba(212, 98, 42, 0.12);
+}
+
+.secao + .secao {
+  border-top: 1px solid rgba(212, 98, 42, 0.14);
 }
 
 .secao-escura,
-#causa.secao-escura,
-#desenvolvedor.secao-escura {
-  background: linear-gradient(180deg, #fceee3 0%, #fde8d8 50%, #fceee3 100%);
-}
-
+#causa,
+#desenvolvedor,
+#escola,
+#projeto,
+#ano-voluntariado,
 .secao-form,
 #inscricao {
-  background: linear-gradient(165deg, #fde4d4 0%, #fff0e6 40%, #fff9f5 100%);
+  background: transparent;
 }
 
-#escola.secao-escola {
-  background: linear-gradient(180deg, #fff6f0 0%, #fceee3 100%);
+#inicio.hero {
+  background:
+    radial-gradient(ellipse 110% 100% at 70% 0%, rgba(232, 149, 80, 0.5), transparent 60%),
+    radial-gradient(ellipse 90% 80% at 0% 100%, rgba(212, 98, 42, 0.35), transparent 55%),
+    linear-gradient(180deg, #ffd9bc 0%, #ffefe3 45%, #ffead8 100%) !important;
+}
+
+#escola {
+  background: linear-gradient(180deg, rgba(255, 220, 190, 0.5), rgba(255, 234, 216, 0.3));
+}
+
+#causa,
+#desenvolvedor {
+  background: linear-gradient(180deg, rgba(255, 210, 175, 0.55), rgba(255, 228, 205, 0.35));
+}
+
+#inscricao {
+  background: linear-gradient(165deg, rgba(255, 200, 160, 0.6), rgba(255, 235, 215, 0.4));
 }
 
 #escola .escola-fachada-legenda {
-  background: #fceee3;
+  background: #ffd4b0;
+  color: var(--laranja-deep);
 }
 
-#projeto.secao {
-  background: linear-gradient(180deg, #fff9f5 0%, #fff3e8 100%);
-}
-
-#ano-voluntariado.secao {
-  background: #fffcfa;
-}
-
-.cabecalho.scrolled {
-  background: rgba(255, 249, 245, 0.94);
-  border-bottom-color: var(--laranja-line);
+.cabecalho.scrolled,
+.nav-menu.aberto {
+  background: rgba(255, 240, 228, 0.96);
+  border-color: var(--laranja-line);
 }
 
 .glass-3d,
@@ -2300,44 +2321,100 @@ body {
 .card,
 .formulario,
 .projeto-item,
-.dif-item {
-  background: rgba(255, 255, 255, 0.88);
+.dif-item,
+.destaque-box,
+.escola-cta,
+.projeto-aviso,
+.contador-voluntarios {
+  background: rgba(255, 252, 248, 0.92);
+  border-color: rgba(212, 98, 42, 0.18);
 }
 
+.destaque-box,
+.projeto-aviso {
+  background: linear-gradient(135deg, #ffe0c8 0%, #fff5eb 100%);
+}
+
+.projeto-aviso {
+  border-left-color: var(--laranja-deep);
+}
+
+.titulo-linha {
+  color: var(--laranja-deep);
+}
+
+.titulo-secao {
+  color: var(--laranja-deep);
+  -webkit-text-fill-color: var(--laranja-deep);
+}
+
+body a:not(.btn):not(.nav-links a):not(.rodape-redes a) {
+  color: var(--laranja-deep);
+}
+
+.campo input,
+.campo select {
+  background: #fff8f2;
+}
+
+.rodape {
+  background: linear-gradient(165deg, #8b3a12 0%, #5c2408 50%, #3d1806 100%);
+  border-top: 4px solid var(--laranja-glow);
+}
+
+/* Modo escuro: monocromático âmbar escuro */
 body.tema-escuro {
-  background-color: #0f1419;
+  --bg: #1a1008;
+  --bg-alt: #241408;
+  background-color: #1a1008;
   background-image:
-    radial-gradient(ellipse 100% 70% at 50% 0%, rgba(212, 98, 42, 0.18), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(212, 98, 42, 0.1), transparent 50%);
+    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(212, 98, 42, 0.35), transparent 55%),
+    linear-gradient(180deg, #221408 0%, #1a1008 100%);
 }
 
-body.tema-escuro .hero {
+body.tema-escuro .hero,
+body.tema-escuro #inicio.hero {
   background:
-    radial-gradient(ellipse 90% 70% at 90% 0%, rgba(212, 98, 42, 0.25), transparent 50%),
-    linear-gradient(180deg, #1a120c 0%, #0f1419 100%) !important;
+    radial-gradient(ellipse 100% 70% at 80% 0%, rgba(212, 98, 42, 0.4), transparent 50%),
+    linear-gradient(180deg, #2a180c 0%, #1a1008 100%) !important;
 }
 
-body.tema-escuro .secao {
-  background: rgba(15, 20, 25, 0.6);
-}
-
-body.tema-escuro .secao-escura,
+body.tema-escuro .secao,
 body.tema-escuro #causa,
-body.tema-escuro #desenvolvedor {
-  background: linear-gradient(180deg, #1a140f 0%, #141a22 100%);
-}
-
-body.tema-escuro .secao-form,
+body.tema-escuro #desenvolvedor,
+body.tema-escuro #escola,
 body.tema-escuro #inscricao {
-  background: linear-gradient(165deg, #221810 0%, #0f1419 100%);
-}
-
-body.tema-escuro #escola {
-  background: linear-gradient(180deg, #141820 0%, #1a140f 100%);
+  background: transparent;
 }
 
 body.tema-escuro .glass-3d,
 body.tema-escuro .card,
 body.tema-escuro .formulario {
-  background: rgba(22, 28, 38, 0.92);
+  background: rgba(40, 26, 16, 0.92);
+  border-color: rgba(232, 149, 80, 0.2);
+}
+
+body.tema-escuro .titulo-secao,
+body.tema-escuro .titulo-linha {
+  color: #ffd4b0;
+  -webkit-text-fill-color: #ffd4b0;
+}
+
+body.tema-escuro .cabecalho.scrolled {
+  background: rgba(26, 16, 8, 0.96);
+}
+
+/* Legibilidade no fundo laranja */
+.prosa p,
+.subtitulo-secao,
+.hero-desc,
+.dif-item p,
+.card p:last-child {
+  color: #6b4428;
+}
+
+body.tema-escuro .prosa p,
+body.tema-escuro .subtitulo-secao,
+body.tema-escuro .hero-desc {
+  color: #d4b89a;
 }
