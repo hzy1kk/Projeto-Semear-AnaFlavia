@@ -1249,3 +1249,170 @@ body.tema-escuro .dif-item h3 {
     max-width: 140px;
   }
 }
+
+/* ——— Correção de quebras de texto ——— */
+body {
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, .titulo-secao, .titulo-linha, .titulo-gradiente, .titulo-menor {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+p, li, .prosa, .subtitulo-secao, .hero-desc, .destaque-box, .dif-item p, .card p, .projeto-item p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: manual;
+}
+
+.titulo-gradiente {
+  line-height: 1.35;
+  color: var(--laranja-deep);
+}
+
+@supports (-webkit-background-clip: text) {
+  .titulo-gradiente {
+    color: transparent;
+  }
+}
+
+.subtitulo-secao {
+  max-width: 40rem;
+  line-height: 1.55;
+}
+
+.hero-desc {
+  max-width: 36rem;
+}
+
+.container {
+  width: min(820px, 100%);
+}
+
+.container-largo {
+  width: min(1080px, 100%);
+}
+
+.duas-colunas {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.75rem;
+}
+
+.prosa.duas-colunas p {
+  margin-bottom: 0;
+}
+
+.marca {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.marca-texto {
+  min-width: 0;
+}
+
+.marca-texto strong,
+.marca-texto span {
+  white-space: nowrap;
+}
+
+.nav {
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+.float-badge {
+  white-space: normal;
+  max-width: min(12rem, 40vw);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.credito-imagens,
+.rodape a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.card h3,
+.dif-item h3,
+.projeto-item h3 {
+  text-wrap: balance;
+  line-height: 1.35;
+}
+
+.card .numero {
+  white-space: nowrap;
+}
+
+.card .numero small {
+  white-space: normal;
+}
+
+.quebra-suave {
+  display: none;
+}
+
+.texto-destaque {
+  display: inline;
+}
+
+.glass-3d,
+[data-tilt],
+[data-reveal] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 900px) {
+  .hero-slogan {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 28rem;
+    border-left: none;
+    padding-left: 0;
+    border-top: 3px solid var(--laranja);
+    padding-top: 0.85rem;
+  }
+
+  .hero-desc,
+  .subtitulo-secao {
+    text-align: center;
+  }
+
+  .marca-texto strong,
+  .marca-texto span {
+    white-space: normal;
+  }
+
+  .quebra-suave {
+    display: block;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .diferenciais-escola {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
