@@ -1710,3 +1710,51 @@ body.tema-escuro .projeto-aviso strong {
 .rodape-redes a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+.dev-panel-simples {
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.dev-nome {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.dev-meta {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.dev-panel-simples .dev-desc {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.dev-panel-simples .dev-foto {
+  max-width: 120px;
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .dev-panel-simples {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .dev-panel-simples .dev-foto {
+    margin: 0 auto;
+  }
+
+  .dev-panel-simples .tech-tags {
+    justify-content: center;
+  }
+}
