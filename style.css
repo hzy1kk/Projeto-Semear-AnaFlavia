@@ -17,7 +17,7 @@
   --sombra-3d: 0 32px 80px rgba(13, 71, 161, 0.18);
   --raio: 20px;
   --raio-sm: 12px;
-  --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: "Segoe UI", "Roboto", "Helvetica Neue", Arial, system-ui, sans-serif;
   --mono: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --header-h: 72px;
@@ -31,6 +31,30 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+
+/* Tipografia ampliada */
+html {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 body {
@@ -168,13 +192,14 @@ select:focus-visible {
 
 .marca-texto strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .marca-texto span {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -190,7 +215,7 @@ select:focus-visible {
 
 .nav-links a {
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   text-decoration: none;
   color: var(--text-muted);
   padding: 0.5rem 0.85rem;
@@ -235,7 +260,7 @@ body.tema-escuro .nav-links a.ativo {
 .secao-kicker {
   display: block;
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--laranja);
   letter-spacing: 0.06em;
   margin-bottom: 0.75rem;
@@ -243,7 +268,7 @@ body.tema-escuro .nav-links a.ativo {
 }
 
 .titulo-secao {
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-size: clamp(2.1rem, 4.5vw, 3.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -263,7 +288,8 @@ body.tema-escuro .titulo-secao {
 
 .subtitulo-secao {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
   margin: 0 0 2rem;
   max-width: 52ch;
 }
@@ -414,7 +440,7 @@ body.tema-escuro .hero-badge {
 
 .titulo-linha {
   display: block;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--azul-deep);
@@ -426,7 +452,7 @@ body.tema-escuro .titulo-linha {
 
 .titulo-gradiente {
   display: block;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
   font-weight: 500;
   margin-top: 0.35rem;
   background: linear-gradient(90deg, var(--laranja), var(--azul));
@@ -436,7 +462,7 @@ body.tema-escuro .titulo-linha {
 }
 
 .hero-slogan {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-style: italic;
   color: var(--text-muted);
   border-left: 3px solid var(--laranja);
@@ -446,6 +472,7 @@ body.tema-escuro .titulo-linha {
 
 .hero-desc {
   color: var(--text-muted);
+  font-size: 1.1rem;
   max-width: 48ch;
   margin: 0 0 1.75rem;
 }
@@ -671,6 +698,7 @@ body.tema-escuro .secao-escura {
 .prosa p {
   color: var(--text-muted);
   margin: 0 0 1rem;
+  font-size: 1.05rem;
 }
 
 .duas-colunas {
@@ -1065,92 +1093,48 @@ body.tema-escuro .tech-tags span {
 
 
 /* ——— Colégio Paulo de Tarso (imagens oficiais) ——— */
-.marca-logo {
-  object-fit: contain;
-  border-radius: 10px;
-  filter: drop-shadow(0 4px 12px rgba(30, 136, 229, 0.25));
-}
-
-.hero-visual-duplo {
-  position: relative;
-  min-height: 320px;
-}
-
-.hero-card-ia {
-  position: absolute;
-  bottom: -12px;
-  left: -24px;
-  width: 42%;
-  max-width: 200px;
-  margin: 0;
-  padding: 0.5rem;
-  border-radius: var(--raio-sm);
+.escola-fachada {
+  margin: 0 0 3rem;
+  border-radius: 0;
   overflow: hidden;
-  transform: translateZ(60px) rotate(-4deg);
-  z-index: 3;
+  box-shadow: var(--sombra-3d);
 }
 
-.hero-card-ia img {
-  border-radius: 8px;
+.escola-fachada img {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-}
-
-.hero-card-ia figcaption {
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin-top: 0.35rem;
-  text-align: center;
-}
-
-.hero-imagem-escola img {
-  width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-}
-
-/* Seção escola */
-.secao-escola {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.escola-banner-wrap {
-  position: relative;
-  max-height: 320px;
-  overflow: hidden;
-  margin-bottom: 3rem;
-}
-
-.escola-banner-wide {
-  width: 100%;
-  height: 320px;
+  max-height: 420px;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
-.escola-banner-overlay {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--raio);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.escola-fachada-legenda {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  padding: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg);
 }
 
-.escola-logo-grande {
-  height: 72px;
+.marca-logo {
+  height: 56px;
   width: auto;
+  max-width: 200px;
   object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 4px 14px rgba(30, 136, 229, 0.2));
 }
+
+.dif-item img {
+  margin: 0 auto 1rem;
+  object-fit: contain;
+  height: 80px;
+  width: auto;
+}
+
 
 .escola-conteudo {
   padding: 0 1.5rem 2rem;
@@ -1158,32 +1142,19 @@ body.tema-escuro .tech-tags span {
 
 .diferenciais-escola {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin: 2.5rem 0;
 }
 
 .dif-item {
-  padding: 1.25rem;
+  padding: 1.5rem 1.25rem;
   text-align: center;
 }
 
-.dif-item img:not(.dif-banner-mini) {
-  margin: 0 auto 0.75rem;
-  object-fit: contain;
-}
-
-.dif-banner-mini {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: var(--raio-sm);
-  margin-bottom: 0.75rem;
-}
-
 .dif-item h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
   color: var(--azul-deep);
 }
 
@@ -1193,15 +1164,16 @@ body.tema-escuro .dif-item h3 {
 
 .dif-item p {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
+  line-height: 1.55;
 }
 
 .galeria-escola {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 1.25rem 0 2rem;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
 }
 
 .galeria-item {
@@ -1219,21 +1191,21 @@ body.tema-escuro .dif-item h3 {
 }
 
 .galeria-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .galeria-item figcaption {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-align: center;
-  padding: 0.6rem;
+  padding: 0.75rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .escola-cta {
-  padding: 1.75rem 2rem;
+  padding: 2rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -1241,51 +1213,39 @@ body.tema-escuro .dif-item h3 {
 .escola-cta p {
   margin: 0 0 1rem;
   color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 .credito-imagens {
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
   opacity: 0.7;
   margin-top: 1rem !important;
   margin-bottom: 0 !important;
 }
 
-.projeto-local-banner {
-  margin: 0 0 2rem;
-  border-radius: var(--raio);
-  overflow: hidden;
-  box-shadow: var(--sombra-3d);
-}
-
-.projeto-local-banner img {
-  width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-}
-
-.rodape-logo {
-  margin: 0 auto 1rem;
-  height: 64px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.95;
+.secao-escola {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 900px) {
-  .diferenciais-escola,
+  .diferenciais-escola {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .galeria-escola {
     grid-template-columns: 1fr;
   }
+}
 
-  .hero-card-ia {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: 60%;
-    margin: -2rem auto 0;
+@media (max-width: 520px) {
+  .diferenciais-escola {
+    grid-template-columns: 1fr;
   }
 
-  .escola-logo-grande {
-    height: 48px;
+  .marca-logo {
+    height: 44px;
+    max-width: 140px;
   }
 }
