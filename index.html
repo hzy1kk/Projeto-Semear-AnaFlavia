@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Semear Futuro — projeto de voluntariado da Escola Paulo de Tarso para apoiar crianças em situação de vulnerabilidade.">
   <title>Semear Futuro | Escola Paulo de Tarso</title>
+  <link rel="icon" href="images/escola/favicon-192.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,13 +16,14 @@
   <header class="cabecalho" id="cabecalho">
     <nav class="nav" aria-label="Menu principal">
       <a href="#inicio" class="marca">
-        <img src="images/logo-escola.svg" alt="Logo Escola Paulo de Tarso" width="48" height="48">
+        <img class="marca-logo" src="images/escola/favicon-192.png" alt="Logo Colégio Paulo de Tarso" width="48" height="48">
         <div class="marca-texto">
           <strong>Semear Futuro</strong>
           <span>Escola Paulo de Tarso</span>
         </div>
       </a>
       <ul class="nav-links">
+        <li><a href="#escola" data-nav>Escola</a></li>
         <li><a href="#ano-voluntariado" data-nav>Voluntariado</a></li>
         <li><a href="#causa" data-nav>Causa</a></li>
         <li><a href="#projeto" data-nav>Projeto</a></li>
@@ -70,13 +72,13 @@
           </div>
         </div>
 
-        <div class="hero-visual" data-reveal data-reveal-delay="120">
+        <div class="hero-visual hero-visual-duplo" data-reveal data-reveal-delay="120">
           <div class="card-3d" id="heroCard3d">
             <div class="card-3d-inner">
-              <figure class="hero-imagem">
+              <figure class="hero-imagem hero-imagem-escola">
                 <img
-                  src="images/semear-futuro-hero.png"
-                  alt="Ilustração de voluntários entregando kits escolares — imagem gerada por IA"
+                  src="images/escola/banner-principal.jpg"
+                  alt="Banner oficial do Colégio Paulo de Tarso"
                   width="560"
                   height="360"
                 >
@@ -84,8 +86,17 @@
               <div class="card-3d-shine" aria-hidden="true"></div>
             </div>
           </div>
+          <figure class="hero-card-ia glass-3d" data-tilt>
+            <img
+              src="images/semear-futuro-hero.png"
+              alt="Ilustração da campanha Semear Futuro — imagem gerada por IA"
+              width="200"
+              height="130"
+            >
+            <figcaption>Campanha · IA</figcaption>
+          </figure>
           <div class="float-badge float-badge-1" data-parallax="0.35">Kits · 2026</div>
-          <div class="float-badge float-badge-2" data-parallax="0.2">+ Solidariedade</div>
+          <div class="float-badge float-badge-2" data-parallax="0.2">Paulo de Tarso</div>
         </div>
       </div>
 
@@ -95,9 +106,91 @@
       </a>
     </section>
 
+    <section id="escola" class="secao secao-escola">
+      <div class="escola-banner-wrap" data-reveal>
+        <img
+          class="escola-banner-wide"
+          src="images/escola/banner-campus.png"
+          alt="Vista do Colégio Paulo de Tarso"
+          width="1920"
+          height="568"
+        >
+        <div class="escola-banner-overlay glass">
+          <img src="images/escola/logo-colegio.png" alt="Logotipo Colégio Paulo de Tarso" class="escola-logo-grande" width="200" height="200">
+        </div>
+      </div>
+      <div class="container container-largo escola-conteudo">
+        <span class="secao-kicker" data-reveal>// 01 · nossa escola</span>
+        <h2 class="titulo-secao" data-reveal>Colégio Paulo de Tarso</h2>
+        <p class="subtitulo-secao" data-reveal>
+          Escola completa com programa bilíngue · Aclimação, Cambuci e Vila Monumento — São Paulo
+        </p>
+        <div class="prosa duas-colunas" data-reveal>
+          <p>
+            O <strong>Semear Futuro</strong> nasce na comunidade de uma instituição que forma cidadãos
+            comprometidos com <strong>justiça, solidariedade e educação socioemocional</strong> — valores
+            alinhados ao nosso projeto de voluntariado.
+          </p>
+          <p>
+            Referência na região, o colégio integra inglês na rotina diária, tecnologia, robótica e
+            programas como “O Líder em Mim”, preparando alunos para o século XXI.
+          </p>
+        </div>
+
+        <div class="diferenciais-escola" data-reveal>
+          <article class="dif-item glass-3d" data-tilt>
+            <img src="images/escola/educacao-financeira.png" alt="" width="64" height="64">
+            <h3>Educação financeira</h3>
+            <p>Preparação para o mundo real com a plataforma Tindin.</p>
+          </article>
+          <article class="dif-item glass-3d" data-reveal data-reveal-delay="60" data-tilt>
+            <img src="images/escola/banner-bilingue.jpg" alt="Programa bilíngue" class="dif-banner-mini">
+            <h3>Programa bilíngue</h3>
+            <p>Inglês lúdico no dia a dia: fala, escuta, escrita e leitura.</p>
+          </article>
+          <article class="dif-item glass-3d" data-reveal data-reveal-delay="120" data-tilt>
+            <img src="images/escola/banner-socioemocional.jpg" alt="Socioemocional" class="dif-banner-mini">
+            <h3>Socioemocional</h3>
+            <p>“O Líder em Mim” — transformação comportamental na comunidade escolar.</p>
+          </article>
+        </div>
+
+        <h3 class="titulo-menor" data-reveal>Nossa comunidade escolar</h3>
+        <div class="galeria-escola" data-reveal>
+          <figure class="galeria-item glass-3d" data-tilt>
+            <img src="images/escola/segmento-infantil.jpeg" alt="Ensino Infantil no Colégio Paulo de Tarso">
+            <figcaption>Infantil</figcaption>
+          </figure>
+          <figure class="galeria-item glass-3d" data-reveal data-reveal-delay="50" data-tilt>
+            <img src="images/escola/segmento-fund1.jpeg" alt="Ensino Fundamental I">
+            <figcaption>Fundamental I</figcaption>
+          </figure>
+          <figure class="galeria-item glass-3d" data-reveal data-reveal-delay="100" data-tilt>
+            <img src="images/escola/segmento-fund2.jpeg" alt="Ensino Fundamental II">
+            <figcaption>Fundamental II</figcaption>
+          </figure>
+        </div>
+
+        <div class="escola-cta glass-3d" data-reveal data-tilt>
+          <p>
+            <strong>Endereço:</strong>
+            <a href="https://goo.gl/maps/WDSZGqbM3FkBacGy9" target="_blank" rel="noopener noreferrer">
+              Rua Mazzini, 61 — Aclimação, São Paulo — SP
+            </a>
+          </p>
+          <a href="https://colegiopaulodetarso.com.br" class="btn btn-primario" target="_blank" rel="noopener noreferrer">
+            <span>Site oficial do colégio</span>
+            <span class="btn-seta" aria-hidden="true">→</span>
+          </a>
+          <p class="credito-imagens">Imagens integradas do site oficial colegiopaulodetarso.com.br</p>
+        </div>
+      </div>
+    </section>
+
+
     <section id="ano-voluntariado" class="secao">
       <div class="container">
-        <span class="secao-kicker" data-reveal>// 01 · ano internacional</span>
+        <span class="secao-kicker" data-reveal>// 02 · ano internacional</span>
         <h2 class="titulo-secao" data-reveal>Ano do Voluntariado 2026</h2>
         <p class="subtitulo-secao" data-reveal>Ano Internacional dos Voluntários para o Desenvolvimento Sustentável</p>
         <div class="prosa" data-reveal>
@@ -121,7 +214,7 @@
 
     <section id="causa" class="secao secao-escura">
       <div class="container container-largo">
-        <span class="secao-kicker" data-reveal>// 02 · a causa</span>
+        <span class="secao-kicker" data-reveal>// 03 · a causa</span>
         <h2 class="titulo-secao" data-reveal>Infância em vulnerabilidade</h2>
         <p class="subtitulo-secao" data-reveal>Por que essa causa importa</p>
         <div class="prosa duas-colunas" data-reveal>
@@ -170,9 +263,12 @@
 
     <section id="projeto" class="secao">
       <div class="container">
-        <span class="secao-kicker" data-reveal>// 03 · projeto concreto</span>
+        <span class="secao-kicker" data-reveal>// 04 · projeto concreto</span>
         <h2 class="titulo-secao" data-reveal>Semear Futuro em ação</h2>
         <p class="subtitulo-secao" data-reveal>Local, datas e papel dos voluntários</p>
+        <figure class="projeto-local-banner" data-reveal>
+          <img src="images/escola/banner-campus.png" alt="Estrutura do Colégio Paulo de Tarso — local do mutirão">
+        </figure>
 
         <div class="timeline-3d">
           <article class="projeto-item glass-3d" data-reveal data-tilt>
@@ -221,7 +317,7 @@
 
     <section id="inscricao" class="secao secao-form">
       <div class="container">
-        <span class="secao-kicker" data-reveal>// 04 · inscrição</span>
+        <span class="secao-kicker" data-reveal>// 05 · inscrição</span>
         <h2 class="titulo-secao" data-reveal>Seja voluntário</h2>
         <p class="subtitulo-secao" data-reveal>Preencha o formulário — dados salvos no seu navegador</p>
 
@@ -267,7 +363,7 @@
 
     <section id="desenvolvedor" class="secao secao-escura">
       <div class="container container-largo">
-        <span class="secao-kicker" data-reveal>// 05 · desenvolvedor</span>
+        <span class="secao-kicker" data-reveal>// 06 · desenvolvedor</span>
         <h2 class="titulo-secao" data-reveal>Autoria do site</h2>
         <div class="dev-panel glass-3d" data-reveal data-tilt>
           <figure class="dev-foto card-3d-mini">
@@ -296,9 +392,14 @@
   </main>
 
   <footer class="rodape">
-    <p><strong>Semear Futuro</strong> · Escola Paulo de Tarso · 2026</p>
+    <img src="images/escola/logo-colegio.png" alt="" class="rodape-logo" width="80" height="80">
+    <p><strong>Semear Futuro</strong> · Colégio Paulo de Tarso · 2026</p>
+    <p>Rua Mazzini, 61 — Aclimação — São Paulo — SP</p>
+    <p>
+      <a href="https://colegiopaulodetarso.com.br" target="_blank" rel="noopener noreferrer">colegiopaulodetarso.com.br</a>
+    </p>
     <p class="rodape-mono">built with HTML · CSS · JS</p>
-    <p>&copy; 2026 Escola Paulo de Tarso</p>
+    <p>&copy; 2026 Colégio Paulo de Tarso</p>
   </footer>
 
   <script src="script.js"></script>
