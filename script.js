@@ -103,7 +103,7 @@
   }
 
   function limparErros() {
-    ["Nome", "Idade", "Email", "Itens"].forEach(function (nome) {
+    ["Nome", "Idade", "Email", "Telefone", "Itens"].forEach(function (nome) {
       var campo = document.getElementById("campo" + nome);
       var erro = document.getElementById("erro" + nome);
       if (campo) campo.classList.remove("campo-erro");
@@ -139,6 +139,11 @@
       mostrarErro("campoEmail", "erroEmail", "E-mail inválido.");
       valido = false;
     }
+    var telDigitos = (dados.telefone || "").replace(/\D/g, "");
+    if (telDigitos.length < 10 || telDigitos.length > 11) {
+      mostrarErro("campoTelefone", "erroTelefone", "Informe um telefone válido com DDD (10 ou 11 dígitos).");
+      valido = false;
+    }
     if (!dados.itensArrecadar) {
       mostrarErro("campoItens", "erroItens", "Selecione uma opção.");
       valido = false;
@@ -156,6 +161,7 @@
       nome: document.getElementById("nome").value.trim(),
       idade: Number(document.getElementById("idade").value, 10),
       email: document.getElementById("email").value.trim().toLowerCase(),
+      telefone: document.getElementById("telefone").value.trim(),
       itensArrecadar: document.getElementById("itensArrecadar").value,
       dataInscricao: new Date().toISOString(),
     };
@@ -180,7 +186,7 @@
       msgSucesso.textContent =
         "Inscrição confirmada, " +
         dados.nome.split(" ")[0] +
-        "! Nos vemos no mutirão Semear Futuro.";
+        "! Em breve a Direção divulgará as datas do Semear Futuro.";
       msgSucesso.classList.add("visivel");
     }
   }

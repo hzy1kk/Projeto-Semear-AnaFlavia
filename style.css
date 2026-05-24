@@ -1670,3 +1670,43 @@ p, li, .prosa, .subtitulo-secao, .hero-desc {
     display: block;
   }
 }
+
+.projeto-aviso {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--laranja);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.projeto-aviso strong {
+  color: var(--azul-deep);
+}
+
+body.tema-escuro .projeto-aviso strong {
+  color: #90caf9;
+}
+
+.rodape-redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 1rem;
+  margin: 1rem 0;
+}
+
+.rodape-redes a {
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffcc80;
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid rgba(255, 204, 128, 0.35);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.rodape-redes a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
