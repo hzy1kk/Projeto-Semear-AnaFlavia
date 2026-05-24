@@ -1,9 +1,11 @@
 /* Semear Futuro — Premium UI · CSS 3D */
 :root {
-  --laranja: #e07a2f;
-  --laranja-glow: #f4a261;
-  --laranja-deep: #c45c1a;
-  --laranja-soft: #fef6f0;
+  --laranja: #d4622a;
+  --laranja-glow: #e89550;
+  --laranja-deep: #a84818;
+  --laranja-soft: #fdf3eb;
+  --laranja-muted: rgba(212, 98, 42, 0.14);
+  --laranja-line: rgba(212, 98, 42, 0.35);
   --azul: #1e5a8a;
   --azul-deep: #0c2340;
   --azul-glow: #4a8bb8;
@@ -2043,4 +2045,185 @@ body.tema-escuro .destaque-box {
     transform: none;
     box-shadow: var(--sombra-3d);
   }
+}
+
+/* ═══ Toque laranja premium ═══ */
+.scroll-progress {
+  background: linear-gradient(90deg, var(--laranja-deep), var(--laranja), var(--laranja-glow));
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse 90% 70% at 100% 0%, rgba(212, 98, 42, 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 0% 100%, rgba(30, 90, 138, 0.06), transparent 50%),
+    var(--bg);
+}
+
+.hero-bg .orb-2 {
+  opacity: 0.2;
+  background: radial-gradient(circle at 35% 35%, var(--laranja-glow), var(--laranja-deep));
+}
+
+.hero-badge {
+  background: var(--laranja-soft);
+  color: var(--laranja-deep);
+  border-color: var(--laranja-line);
+}
+
+.titulo-gradiente {
+  color: var(--laranja-deep);
+  -webkit-text-fill-color: var(--laranja-deep);
+  font-weight: 600;
+}
+
+.secao-kicker {
+  color: var(--laranja);
+}
+
+.secao-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--laranja-glow), var(--laranja));
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 0 12px rgba(212, 98, 42, 0.45);
+}
+
+.hero-slogan {
+  border-left-color: var(--laranja);
+  border-left-width: 4px;
+}
+
+.btn-primario {
+  background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-deep) 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(168, 72, 24, 0.28);
+}
+
+.btn-primario:hover {
+  background: linear-gradient(135deg, var(--laranja-glow) 0%, var(--laranja) 100%);
+  box-shadow: 0 8px 24px rgba(168, 72, 24, 0.32);
+}
+
+.card::before {
+  background: linear-gradient(90deg, var(--laranja), var(--laranja-glow));
+  height: 3px;
+  opacity: 1;
+}
+
+.destaque-box {
+  background: linear-gradient(135deg, var(--laranja-soft) 0%, #fff 100%);
+  border: 1px solid var(--laranja-line);
+  border-left: 4px solid var(--laranja);
+}
+
+.destaque-box strong {
+  color: var(--laranja-deep);
+}
+
+.projeto-aviso {
+  background: linear-gradient(135deg, var(--laranja-soft), var(--azul-soft));
+  border-left-color: var(--laranja);
+}
+
+.projeto-icone {
+  background: linear-gradient(145deg, var(--laranja), var(--laranja-deep));
+  box-shadow: 0 6px 16px rgba(168, 72, 24, 0.25);
+}
+
+.contador-num {
+  background: linear-gradient(135deg, var(--laranja-deep), var(--laranja-glow));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card .numero {
+  background: linear-gradient(135deg, var(--laranja-deep), var(--laranja));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.nav-links a:hover,
+.nav-links a.ativo {
+  background: var(--laranja-soft);
+  color: var(--laranja-deep);
+}
+
+body.tema-escuro .nav-links a:hover,
+body.tema-escuro .nav-links a.ativo {
+  background: var(--laranja-muted);
+  color: var(--laranja-glow);
+}
+
+.lista-premium li::before {
+  color: var(--laranja);
+}
+
+.float-badge {
+  border-color: var(--laranja-line);
+}
+
+.float-badge-2 {
+  color: var(--laranja-deep);
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 3px var(--laranja-muted);
+}
+
+.tech-tags span {
+  border-color: var(--laranja-line);
+}
+
+.tech-tags span:first-child {
+  background: var(--laranja-soft);
+  color: var(--laranja-deep);
+}
+
+.rodape {
+  background: linear-gradient(165deg, var(--azul-deep) 0%, #0a1a30 55%, #1a2f4a 100%);
+  border-top: 3px solid var(--laranja);
+}
+
+.rodape-redes a:hover {
+  background: var(--laranja);
+  border-color: var(--laranja);
+  color: #fff;
+}
+
+.titulo-secao::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--laranja), transparent);
+}
+
+/* Mantém clean: título principal navy */
+.titulo-secao {
+  color: var(--azul-deep);
+  -webkit-text-fill-color: var(--azul-deep);
+}
+
+body.tema-escuro .hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 100% 0%, rgba(212, 98, 42, 0.12), transparent 50%),
+    var(--bg);
+}
+
+body.tema-escuro .titulo-gradiente {
+  color: var(--laranja-glow);
+  -webkit-text-fill-color: var(--laranja-glow);
+}
+
+body.tema-escuro .destaque-box {
+  background: linear-gradient(135deg, rgba(212, 98, 42, 0.15), rgba(20, 30, 42, 0.9));
+  border-color: var(--laranja-line);
 }
