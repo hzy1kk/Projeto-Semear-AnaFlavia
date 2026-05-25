@@ -1759,7 +1759,7 @@ body.tema-escuro .projeto-aviso strong {
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 22%;
   display: block;
 }
 
@@ -1771,6 +1771,14 @@ body.tema-escuro .projeto-aviso strong {
 .dev-panel-simples .dev-foto img {
   border-radius: 50%;
 }
+.dev-panel-simples .dev-foto {
+  box-shadow: 0 8px 28px rgba(30, 90, 138, 0.2);
+}
+
+body.tema-escuro .dev-panel-simples .dev-foto {
+  box-shadow: 0 8px 28px rgba(74, 139, 184, 0.25);
+}
+
 
 .dev-panel-simples .dev-foto {
   max-width: 140px;
