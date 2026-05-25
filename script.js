@@ -186,7 +186,7 @@
       msgSucesso.textContent =
         "Inscrição confirmada, " +
         dados.nome.split(" ")[0] +
-        "! Em breve a Direção divulgará as datas do Semear Futuro.";
+        "! A Direção combinará as datas das visitas aos lares.";
       msgSucesso.classList.add("visivel");
     }
   }
