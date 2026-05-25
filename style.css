@@ -1753,8 +1753,27 @@ body.tema-escuro .projeto-aviso strong {
   color: var(--text-muted);
 }
 
+
+.dev-foto img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+}
+
 .dev-panel-simples .dev-foto {
-  max-width: 120px;
+  max-width: 140px;
+  border-radius: 50%;
+}
+
+.dev-panel-simples .dev-foto img {
+  border-radius: 50%;
+}
+
+.dev-panel-simples .dev-foto {
+  max-width: 140px;
   margin: 0;
 }
 
