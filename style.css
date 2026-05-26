@@ -2729,7 +2729,7 @@ body.tema-escuro .causa-pilar h3 {
   }
 }
 
-/* ═══ Branding institucional (colégio + Semear Futuro) ═══ */
+/* ═══ Branding institucional — parceria e identidade ═══ */
 .hero-marcas {
   display: flex;
   flex-wrap: wrap;
@@ -2744,252 +2744,233 @@ body.tema-escuro .causa-pilar h3 {
   padding: 0.35rem 0.75rem;
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: none;
   color: var(--azul-deep);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(30, 90, 138, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(30, 90, 138, 0.18);
   border-radius: 999px;
-  backdrop-filter: blur(8px);
 }
 
 body.tema-escuro .hero-instituicao {
   color: var(--text);
-  background: rgba(22, 35, 51, 0.85);
-  border-color: rgba(74, 139, 184, 0.35);
+  background: rgba(22, 35, 51, 0.9);
+  border-color: rgba(74, 139, 184, 0.3);
 }
 
 .marca-logo-wrap,
-.parceria-logo-wrap,
+.parceria-logo-box,
 .rodape-logo-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   background: #fff;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 12px rgba(12, 35, 64, 0.08);
+  border: 1px solid rgba(30, 90, 138, 0.12);
+  box-shadow: 0 2px 14px rgba(12, 35, 64, 0.08);
 }
 
 .marca-logo-wrap {
-  padding: 0.35rem 0.5rem;
-  min-height: 44px;
+  padding: 0.4rem 0.55rem;
 }
 
 .marca-logo {
-  height: 36px;
+  height: 34px;
   width: auto;
-  max-width: 120px;
+  max-width: 110px;
   object-fit: contain;
   display: block;
 }
 
 .marca-divider {
   width: 1px;
-  height: 32px;
+  height: 28px;
   background: var(--border-strong);
   flex-shrink: 0;
 }
 
-.marca-texto strong {
-  color: var(--azul-deep);
-}
-
-body.tema-escuro .marca-texto strong {
-  color: var(--text);
-}
-
-/* Seção parceria */
+/* —— Seção parceria —— */
 .secao-parceria {
-  padding: clamp(3rem, 6vw, 4.5rem) 0;
+  padding: clamp(3rem, 7vw, 5rem) 0;
 }
 
 #parceria {
-  background: linear-gradient(180deg, rgba(232, 241, 250, 0.9) 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #e8f2fa 0%, var(--bg) 55%, var(--bg) 100%);
 }
 
 body.tema-escuro #parceria {
-  background: linear-gradient(180deg, rgba(18, 30, 46, 0.95) 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #101a28 0%, var(--bg) 55%, var(--bg) 100%);
 }
 
-.parceria-cabecalho {
-  margin-bottom: 1.75rem;
+.parceria-intro {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2rem;
 }
 
-.parceria-identidade {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 0.75rem;
-  padding: 1.25rem 1.5rem;
+.parceria-intro .subtitulo-secao {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parceria-titulo-secao {
+  -webkit-text-fill-color: transparent;
+}
+
+.parceria-painel {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--raio);
-  box-shadow: var(--sombra);
+  border-radius: calc(var(--raio) + 4px);
+  box-shadow: var(--sombra-3d);
+  overflow: hidden;
 }
 
-.parceria-logo-wrap {
+body.tema-escuro .parceria-painel {
+  background: rgba(22, 35, 51, 0.65);
+  border-color: rgba(74, 139, 184, 0.2);
+}
+
+.parceria-painel-topo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(30, 90, 138, 0.06) 0%, transparent 60%);
+}
+
+.parceria-logo-box {
   width: 88px;
   height: 88px;
-  padding: 0.5rem;
+  padding: 0.55rem;
   border-radius: 14px;
 }
 
-.parceria-logo-wrap img {
+.parceria-logo-box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.parceria-titulo {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
-  color: var(--azul-deep);
-  line-height: 1.2;
-  background: none;
-  -webkit-text-fill-color: var(--azul-deep);
-}
-
-body.tema-escuro .parceria-titulo {
-  color: var(--text);
-  -webkit-text-fill-color: var(--text);
-}
-
-.parceria-subtitulo {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
+.parceria-painel-texto p {
+  margin: 0 0 1rem;
   color: var(--text-muted);
-  max-width: 52ch;
+  line-height: 1.7;
+  font-size: 1.02rem;
 }
 
-.parceria-banner {
-  position: relative;
-  margin: 0 0 1.75rem;
-  border-radius: var(--raio);
-  overflow: hidden;
-  border: 1px solid var(--border-strong);
-  box-shadow: var(--sombra-3d);
+.parceria-aviso {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--raio-sm);
+  background: rgba(212, 98, 42, 0.1);
+  border-left: 4px solid var(--laranja);
+}
+
+.parceria-aviso strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--laranja-deep);
+}
+
+body.tema-escuro .parceria-aviso strong {
+  color: var(--laranja-glow);
+}
+
+.parceria-aviso span {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* Galeria: 1 grande + 2 pequenas */
+.parceria-galeria {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 1.25rem;
   background: var(--bg-alt);
 }
 
-.parceria-banner img {
+body.tema-escuro .parceria-galeria {
+  background: rgba(12, 20, 31, 0.5);
+}
+
+.parceria-galeria-destaque {
+  grid-row: 1 / 3;
+}
+
+.parceria-galeria-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.parceria-img-wrap {
+  flex: 1;
+  border-radius: var(--raio-sm);
+  overflow: hidden;
+  background: #dde8f2;
+  border: 1px solid var(--border);
+  min-height: 120px;
+}
+
+body.tema-escuro .parceria-img-wrap {
+  background: #1a2838;
+}
+
+.parceria-galeria-destaque .parceria-img-wrap {
+  min-height: 260px;
+}
+
+.parceria-img-wrap img {
   display: block;
   width: 100%;
-  height: clamp(180px, 32vw, 300px);
+  height: 100%;
+  min-height: inherit;
   object-fit: cover;
   object-position: center;
 }
 
-.parceria-banner figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 2.5rem 1.25rem 1rem;
-  font-size: 0.85rem;
+.parceria-galeria-destaque .parceria-img-wrap img {
+  object-position: center 40%;
+}
+
+.parceria-galeria-item figcaption {
+  margin: 0.5rem 0 0;
+  padding: 0 0.15rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: #fff;
-  background: linear-gradient(to top, rgba(12, 35, 64, 0.88), transparent);
-}
-
-.parceria-corpo {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(1.25rem, 3vw, 2rem);
-  align-items: stretch;
-}
-
-.parceria-texto {
-  padding: 1.5rem 1.5rem 1.35rem;
-  border-radius: var(--raio);
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.parceria-texto .titulo-menor {
-  margin: 0;
-}
-
-.parceria-texto p {
-  margin: 0;
   color: var(--text-muted);
+  text-align: center;
+  line-height: 1.35;
 }
 
-.parceria-texto .projeto-aviso {
-  margin: 0;
-  padding: 0.85rem 1rem;
-  border-radius: var(--raio-sm);
-  background: rgba(30, 90, 138, 0.08);
-  border-left: 3px solid var(--laranja);
-}
-
-.parceria-lista {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-.parceria-lista li + li {
-  margin-top: 0.35rem;
-}
-
-.parceria-contato {
+.parceria-painel-rodape {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem 1rem;
-  margin: 0.25rem 0 0;
-  padding-top: 0.75rem;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.5rem 1.35rem;
   border-top: 1px solid var(--border);
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  background: var(--surface);
 }
 
-.btn-sm {
-  padding: 0.45rem 0.9rem;
-  font-size: 0.85rem;
-}
-
-.parceria-banner-sec {
+.parceria-endereco {
   margin: 0;
-  border-radius: var(--raio);
-  overflow: hidden;
-  border: 1px solid var(--border-strong);
-  box-shadow: var(--sombra-3d);
-  display: flex;
-  flex-direction: column;
-  background: var(--bg-elevated);
-  min-height: 100%;
-}
-
-.parceria-banner-sec img {
-  display: block;
-  width: 100%;
-  flex: 1;
-  min-height: 200px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.parceria-banner-sec figcaption {
-  margin: 0;
-  padding: 0.75rem 1rem;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
-  background: var(--bg-elevated);
-  border-top: 1px solid var(--border);
-  text-align: center;
+  line-height: 1.5;
 }
 
 /* Rodapé */
 .rodape-inner {
-  max-width: 520px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -3003,84 +2984,83 @@ body.tema-escuro .parceria-titulo {
 }
 
 .rodape-logo-wrap {
-  padding: 0.5rem 0.65rem;
-  border-radius: 10px;
-  background: #fff;
-  border: none;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 0.45rem 0.6rem;
 }
 
 .rodape-logo {
-  height: 32px;
+  height: 30px;
   width: auto;
-  max-width: 100px;
+  max-width: 96px;
   object-fit: contain;
-  display: block;
   filter: none;
   opacity: 1;
 }
 
 .rodape-titulo {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #fff;
 }
 
 .rodape-instituicao {
   margin: 0.2rem 0 0;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   opacity: 0.88;
-  line-height: 1.45;
 }
 
 .rodape-endereco {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.65rem;
+  font-size: 0.86rem;
   opacity: 0.8;
-  font-size: 0.88rem;
 }
 
 .rodape-credito {
-  margin: 0.5rem 0 0;
-  font-size: 0.8rem;
-  opacity: 0.65;
+  margin: 0.45rem 0 0;
+  font-size: 0.78rem;
+  opacity: 0.6;
 }
 
-@media (max-width: 900px) {
-  .parceria-identidade {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .parceria-painel-topo {
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
   }
 
-  .parceria-subtitulo {
-    max-width: none;
+  .parceria-galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1rem;
   }
 
-  .parceria-corpo {
-    grid-template-columns: 1fr;
+  .parceria-galeria-destaque {
+    grid-row: auto;
+  }
+
+  .parceria-galeria-destaque .parceria-img-wrap {
+    min-height: 200px;
+  }
+
+  .parceria-painel-rodape {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .parceria-painel-rodape .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .marca-divider {
     display: none;
   }
-
-  .marca {
-    gap: 0.5rem;
-  }
 }
 
 @media (max-width: 520px) {
-  .marca-logo-wrap {
-    padding: 0.25rem 0.4rem;
-    min-height: 38px;
-  }
-
   .marca-logo {
-    height: 30px;
-    max-width: 96px;
-  }
-
-  .marca-texto strong {
-    font-size: 0.9rem;
+    height: 28px;
+    max-width: 90px;
   }
 
   .hero-marcas {
