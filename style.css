@@ -2816,11 +2816,23 @@ body.tema-escuro #parceria {
 }
 
 .parceria-painel {
+  position: relative;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: calc(var(--raio) + 4px);
   box-shadow: var(--sombra-3d);
   overflow: hidden;
+}
+
+.parceria-painel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--laranja), var(--azul-glow), var(--azul));
+  z-index: 1;
 }
 
 body.tema-escuro .parceria-painel {
@@ -2885,69 +2897,88 @@ body.tema-escuro .parceria-aviso strong {
   line-height: 1.55;
 }
 
-/* Galeria: 1 grande + 2 pequenas */
-.parceria-galeria {
-  display: grid;
-  grid-template-columns: 1.45fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.75rem;
-  padding: 1rem 1.5rem 1.25rem;
-  background: var(--bg-alt);
-}
-
-body.tema-escuro .parceria-galeria {
-  background: rgba(12, 20, 31, 0.5);
-}
-
-.parceria-galeria-destaque {
-  grid-row: 1 / 3;
-}
-
-.parceria-galeria-item {
-  margin: 0;
+/* Galeria em linhas — panorâmica + dupla */
+.parceria-fotos {
   display: flex;
   flex-direction: column;
-  min-height: 0;
+  gap: 1rem;
+  padding: 1.35rem 1.75rem 1.5rem;
+  background: linear-gradient(180deg, rgba(232, 241, 250, 0.65) 0%, rgba(255, 255, 255, 0.4) 100%);
 }
 
-.parceria-img-wrap {
-  flex: 1;
-  border-radius: var(--raio-sm);
+body.tema-escuro .parceria-fotos {
+  background: linear-gradient(180deg, rgba(18, 30, 46, 0.6) 0%, rgba(12, 20, 31, 0.3) 100%);
+}
+
+.parceria-fotos-titulo {
+  margin: 0 0 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--azul);
+}
+
+body.tema-escuro .parceria-fotos-titulo {
+  color: var(--azul-glow);
+}
+
+.parceria-foto {
+  margin: 0;
+  border-radius: 18px;
   overflow: hidden;
-  background: #dde8f2;
-  border: 1px solid var(--border);
-  min-height: 120px;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(30, 90, 138, 0.12);
+  box-shadow: 0 6px 24px rgba(30, 90, 138, 0.1);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
 }
 
-body.tema-escuro .parceria-img-wrap {
-  background: #1a2838;
+.parceria-foto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(30, 90, 138, 0.16);
 }
 
-.parceria-galeria-destaque .parceria-img-wrap {
-  min-height: 260px;
-}
-
-.parceria-img-wrap img {
+.parceria-foto img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: inherit;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+  vertical-align: middle;
 }
 
-.parceria-galeria-destaque .parceria-img-wrap img {
-  object-position: center 40%;
+.parceria-foto-larga img {
+  aspect-ratio: 21 / 7;
+  object-position: center 38%;
+  max-height: 280px;
 }
 
-.parceria-galeria-item figcaption {
-  margin: 0.5rem 0 0;
-  padding: 0 0.15rem;
-  font-size: 0.8rem;
+.parceria-foto-linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.parceria-foto-linha .parceria-foto img {
+  aspect-ratio: 16 / 10;
+  max-height: 200px;
+}
+
+.parceria-foto figcaption {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  color: var(--text-muted);
   text-align: center;
-  line-height: 1.35;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+}
+
+body.tema-escuro .parceria-foto figcaption {
+  background: rgba(22, 35, 51, 0.95);
 }
 
 .parceria-painel-rodape {
@@ -3027,18 +3058,21 @@ body.tema-escuro .parceria-img-wrap {
     text-align: center;
   }
 
-  .parceria-galeria {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .parceria-fotos {
     padding: 1rem;
   }
 
-  .parceria-galeria-destaque {
-    grid-row: auto;
+  .parceria-foto-linha {
+    grid-template-columns: 1fr;
   }
 
-  .parceria-galeria-destaque .parceria-img-wrap {
-    min-height: 200px;
+  .parceria-foto-larga img {
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .parceria-foto-linha .parceria-foto img {
+    max-height: 180px;
   }
 
   .parceria-painel-rodape {
