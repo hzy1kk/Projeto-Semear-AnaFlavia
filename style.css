@@ -2660,13 +2660,10 @@ body.tema-escuro .form-msg {
   color: var(--text);
 }
 
-/* Marca sem logo do colégio */
-.marca-solo .marca-texto {
-  padding-left: 0;
-}
-
-.marca-solo .marca-texto strong {
-  font-size: 1.15rem;
+/* Marca com logo do colégio */
+.marca-texto span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 /* Causa — pilares de ajuda */
@@ -2743,5 +2740,128 @@ body.tema-escuro .causa-pilar h3 {
 @media (max-width: 900px) {
   .causa-pilares {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Branding e parceria com imagens do colégio */
+.hero-instituicao {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--azul);
+}
+
+body.tema-escuro .hero-instituicao {
+  color: var(--azul-glow);
+}
+
+.parceria-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.parceria-conteudo .prosa {
+  margin-bottom: 1.25rem;
+}
+
+.parceria-fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.parceria-foto {
+  margin: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+}
+
+.parceria-foto img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.parceria-foto:first-child img {
+  aspect-ratio: 16 / 10;
+}
+
+.parceria-foto figcaption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+}
+
+.parceria-nota a {
+  color: var(--azul);
+  font-weight: 600;
+}
+
+body.tema-escuro .parceria-nota a {
+  color: var(--azul-glow);
+}
+
+.rodape-marca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.rodape-logo {
+  height: 42px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.rodape-instituicao {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.rodape-endereco {
+  margin: 0 0 0.5rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .parceria-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .parceria-fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .marca-logo {
+    max-width: 110px;
+    height: 40px;
+  }
+
+  .marca-texto strong {
+    font-size: 0.95rem;
+  }
+
+  .marca-texto span {
+    font-size: 0.72rem;
   }
 }

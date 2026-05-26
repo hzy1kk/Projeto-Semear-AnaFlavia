@@ -15,10 +15,17 @@
 
   <header class="cabecalho" id="cabecalho">
     <nav class="nav" aria-label="Menu principal">
-      <a href="#inicio" class="marca marca-solo">
+      <a href="#inicio" class="marca">
+        <img
+          class="marca-logo"
+          src="images/escola/logo-colegio.png"
+          alt="Colégio Paulo de Tarso"
+          width="140"
+          height="44"
+        >
         <div class="marca-texto">
           <strong>Semear Futuro</strong>
-          <span>Visitas · doações · brincadeiras</span>
+          <span>Colégio Paulo de Tarso</span>
         </div>
       </a>
 
@@ -26,7 +33,7 @@
         <ul class="nav-links">
           <li><a href="#causa" data-nav>Causa</a></li>
           <li><a href="#projeto" data-nav>Como ajudar</a></li>
-          <li><a href="#causa" data-nav>Voluntariado 2026</a></li>
+          <li><a href="#ano-voluntariado" data-nav>Voluntariado 2026</a></li>
           <li><a href="#inscricao" data-nav>Inscrição</a></li>
           <li><a href="#parceria" data-nav>Parceria</a></li>
           <li><a href="#desenvolvedor" data-nav>Autoria</a></li>
@@ -58,6 +65,7 @@
 
       <div class="hero-inner">
         <div class="hero-conteudo" data-reveal>
+          <p class="hero-instituicao">Colégio Paulo de Tarso · 2026</p>
           <span class="hero-badge">Crianças em vulnerabilidade</span>
           <h1>
             <span class="titulo-linha">Semear Futuro</span>
@@ -92,7 +100,7 @@
         </div>
       </div>
 
-      <a href="#ano-voluntariado" class="scroll-hint" aria-label="Rolar para próxima seção">
+      <a href="#causa" class="scroll-hint" aria-label="Rolar para próxima seção">
         <span>Ver mais</span>
         <span class="scroll-hint-line"></span>
       </a>
@@ -183,15 +191,48 @@
     </section>
 
     <section id="parceria" class="secao secao-parceria">
-      <div class="container">
+      <div class="container container-largo">
         <span class="secao-kicker" data-reveal>Parceria com o colégio</span>
-        <h2 class="titulo-secao" data-reveal>Apoio institucional</h2>
-        <p class="subtitulo-secao" data-reveal>Projeto real com orientação da Direção — sem perder o foco na causa</p>
-        <div class="prosa" data-reveal>
-          <p>O <strong>Semear Futuro</strong> nasce na <strong>Colégio Paulo de Tarso</strong> e mobiliza alunos e famílias em favor de crianças em vulnerabilidade. A Direção acompanha datas, roteiro e contato com as famílias — para que cada visita seja segura e respeitosa.</p>
+        <h2 class="titulo-secao" data-reveal>Colégio Paulo de Tarso</h2>
+        <p class="subtitulo-secao" data-reveal>Instituição que apoia o Semear Futuro — a causa continua em primeiro lugar</p>
+
+        <div class="parceria-layout" data-reveal>
+          <div class="parceria-conteudo">
+            <div class="prosa">
+              <p>O <strong>Semear Futuro</strong> nasce no <strong>Colégio Paulo de Tarso</strong> e mobiliza alunos e famílias em favor de crianças em vulnerabilidade. A Direção acompanha datas, roteiro e contato com as famílias — para que cada visita seja segura e respeitosa.</p>
+            </div>
+            <div class="projeto-aviso glass-3d">
+              <p><strong>Projeto real:</strong> visitas a lares com apoio da Direção. Datas e roteiro serão combinados com as famílias.</p>
+            </div>
+            <p class="parceria-nota">
+              Rua Mazzini, 61 — Aclimação, São Paulo — SP ·
+              <a href="https://colegiopaulodetarso.com.br" target="_blank" rel="noopener noreferrer">Site do colégio</a>
+            </p>
+          </div>
+
+          <div class="parceria-fotos">
+            <figure class="parceria-foto glass-3d">
+              <img
+                src="images/escola/banner-campus.png"
+                alt="Fachada do Colégio Paulo de Tarso em São Paulo"
+                width="960"
+                height="360"
+                loading="lazy"
+              >
+              <figcaption>Fachada do colégio · Aclimação</figcaption>
+            </figure>
+            <figure class="parceria-foto glass-3d">
+              <img
+                src="images/escola/segmento-infantil.jpeg"
+                alt="Alunos do Colégio Paulo de Tarso — comunidade escolar"
+                width="640"
+                height="480"
+                loading="lazy"
+              >
+              <figcaption>Comunidade do colégio</figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="projeto-aviso glass-3d" data-reveal><p><strong>Projeto real:</strong> visitas a lares com apoio da Direção. Datas e roteiro serão combinados com as famílias.</p></div>
-        <p class="parceria-nota" data-reveal>Colégio Paulo de Tarso · Rua Mazzini, 61 — Aclimação, São Paulo — SP</p>
       </div>
     </section>
 
@@ -256,7 +297,7 @@
         <div id="msgJaInscrito" class="mensagem-aviso glass" role="status"></div>
         <div id="msgSucesso" class="mensagem-sucesso glass" role="status"></div>
 
-        <form id="formVoluntario" class="formulario glass-3d" data-reveal data-tilt novalidate>
+        <form id="formVoluntario" class="formulario glass-3d" data-reveal novalidate>
           <div class="campo" id="campoNome">
             <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" required autocomplete="name" maxlength="80" placeholder="Seu nome">
@@ -328,8 +369,14 @@
   </main>
 
   <footer class="rodape">
-    <p><strong>Semear Futuro</strong> · Voluntariado 2026</p>
-    <p>Projeto da Colégio Paulo de Tarso — Rua Mazzini, 61, Aclimação, São Paulo — SP</p>
+    <div class="rodape-marca">
+      <img src="images/escola/logo-colegio.png" alt="" width="120" height="38" class="rodape-logo">
+      <div>
+        <p><strong>Semear Futuro</strong> · Voluntariado 2026</p>
+        <p class="rodape-instituicao">Projeto do Colégio Paulo de Tarso</p>
+      </div>
+    </div>
+    <p class="rodape-endereco">Rua Mazzini, 61 — Aclimação — São Paulo — SP</p>
     <p class="rodape-nota">Site feito com HTML, CSS e JavaScript</p>
     <p class="rodape-credito">&copy; 2026 · Ana Flávia · Desenvolvimento Web</p>
   </footer>

@@ -13,7 +13,6 @@
   var campoEmail = document.getElementById("email");
   var cabecalho = document.getElementById("cabecalho");
   var scrollProgress = document.getElementById("scrollProgress");
-  var heroCard3d = document.getElementById("heroCard3d");
 
   var reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -220,17 +219,6 @@
           el.style.transform =
             "translate3d(0, " + centro * fator * -0.15 + "px, 0)";
         });
-
-        if (heroCard3d) {
-          var heroRect = heroCard3d.getBoundingClientRect();
-          var heroCenter = heroRect.top / window.innerHeight;
-          var rotX = Math.max(-6, Math.min(6, heroCenter * 8));
-          var inner = heroCard3d.querySelector(".card-3d-inner");
-          if (inner && !heroCard3d.dataset.mouseTilt) {
-            inner.style.transform =
-              "rotateY(-8deg) rotateX(" + (6 + rotX) + "deg)";
-          }
-        }
       }
 
       atualizarNavAtiva();
@@ -337,32 +325,6 @@
       });
     });
 
-    if (heroCard3d) {
-      heroCard3d.addEventListener("mousemove", function (e) {
-        var rect = heroCard3d.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width - 0.5;
-        var y = (e.clientY - rect.top) / rect.height - 0.5;
-        var inner = heroCard3d.querySelector(".card-3d-inner");
-        if (!inner) return;
-        heroCard3d.dataset.mouseTilt = "1";
-        inner.style.animation = "none";
-        inner.style.transform =
-          "rotateY(" +
-          x * 18 +
-          "deg) rotateX(" +
-          -y * 14 +
-          "deg) translateZ(30px)";
-      });
-
-      heroCard3d.addEventListener("mouseleave", function () {
-        delete heroCard3d.dataset.mouseTilt;
-        var inner = heroCard3d.querySelector(".card-3d-inner");
-        if (inner) {
-          inner.style.transform = "";
-          inner.style.animation = "";
-        }
-      });
-    }
   }
 
 
