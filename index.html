@@ -6,6 +6,9 @@
   <meta name="description" content="Semear Futuro — visitas a lares, doações e brincadeiras com crianças em vulnerabilidade. Projeto de voluntariado.">
   <title>Semear Futuro | Voluntariado e visitas aos lares</title>
   <link rel="icon" href="images/escola/favicon-192.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,18 +18,19 @@
 
   <header class="cabecalho" id="cabecalho">
     <nav class="nav" aria-label="Menu principal">
-      <a href="#inicio" class="marca marca-solo">
-        <div class="marca-texto">
+      <a href="#inicio" class="marca">
+        <span class="marca-icone" aria-hidden="true">✦</span>
+        <span class="marca-texto">
           <strong>Semear Futuro</strong>
-          <span>Visitas · doações · brincadeiras</span>
-        </div>
+          <span>plantar carinho · colher esperança</span>
+        </span>
       </a>
 
       <div class="nav-menu" id="navMenu">
         <ul class="nav-links">
           <li><a href="#causa" data-nav>Causa</a></li>
           <li><a href="#projeto" data-nav>Como ajudar</a></li>
-          <li><a href="#causa" data-nav>Voluntariado 2026</a></li>
+          <li><a href="#ano-voluntariado" data-nav>Voluntariado 2026</a></li>
           <li><a href="#inscricao" data-nav>Inscrição</a></li>
           <li><a href="#parceria" data-nav>Parceria</a></li>
           <li><a href="#desenvolvedor" data-nav>Autoria</a></li>
@@ -58,12 +62,13 @@
 
       <div class="hero-inner">
         <div class="hero-conteudo" data-reveal>
-          <span class="hero-badge">Crianças em vulnerabilidade</span>
+          <span class="hero-badge">Nossa causa</span>
           <h1>
             <span class="titulo-linha">Semear Futuro</span>
             <span class="titulo-gradiente">Um dia de presença, carinho e solidariedade</span>
           </h1>
-          <p class="hero-slogan">“Plantamos oportunidades no coração das crianças.”</p>
+          <p class="hero-slogan"><span class="hero-slogan-aspas">“</span>Plantamos oportunidades no coração das crianças.<span class="hero-slogan-aspas">”</span></p>
+          <p class="hero-manifesto">Projeto autoral de voluntariado — visitas aos lares com doações, brincadeiras e muito respeito.</p>
           <p class="hero-desc">Passar um dia com crianças nos lares: levar doações, brincar, ouvir e estar presente. Cada visita é uma semente de esperança e dignidade.</p>
           <div class="hero-botoes">
             <a href="#inscricao" class="btn btn-primario">
@@ -92,7 +97,7 @@
         </div>
       </div>
 
-      <a href="#ano-voluntariado" class="scroll-hint" aria-label="Rolar para próxima seção">
+      <a href="#causa" class="scroll-hint" aria-label="Rolar para próxima seção">
         <span>Ver mais</span>
         <span class="scroll-hint-line"></span>
       </a>
@@ -102,25 +107,25 @@
       <div class="container container-largo">
         <span class="secao-kicker" data-reveal>A causa</span>
         <h2 class="titulo-secao" data-reveal>Por que visitar e ajudar?</h2>
-        <p class="subtitulo-secao" data-reveal>Presença, doações e brincadeiras mudam o dia — e plantam futuro</p>
+        <p class="subtitulo-secao subtitulo-autoral" data-reveal>Não é sobre salvar alguém em um dia — é sobre <strong>lembrar uma criança de que ela importa</strong>.</p>
         <div class="prosa duas-colunas" data-reveal>
           <p>Crianças em <strong>situação de vulnerabilidade social</strong> muitas vezes carecem de alimentação adequada, itens de higiene, brinquedos e, acima de tudo, de <strong>atenção e carinho</strong> no dia a dia.</p>
           <p>O <strong>Semear Futuro</strong> organiza <strong>visitas aos lares</strong>: voluntários passam um dia com as crianças, levam doações, promovem brincadeiras e fortalecem o vínculo com as famílias — sempre com respeito, sigilo e orientação responsável.</p>
         </div>
 
         <div class="causa-pilares" data-reveal>
-          <article class="causa-pilar glass-3d">
-            <span class="causa-pilar-icone" aria-hidden="true">01</span>
+          <article class="causa-pilar cartao-autoral">
+            <span class="causa-pilar-icone" aria-hidden="true">Doar</span>
             <h3>Doações que fazem falta</h3>
             <p>Alimentos não perecíveis, itens de higiene, roupas, brinquedos e material lúdico — tudo arrecadado e entregue com cuidado no dia da visita.</p>
           </article>
-          <article class="causa-pilar glass-3d" data-reveal data-reveal-delay="60">
-            <span class="causa-pilar-icone" aria-hidden="true">02</span>
+          <article class="causa-pilar cartao-autoral" data-reveal data-reveal-delay="60">
+            <span class="causa-pilar-icone" aria-hidden="true">Brincar</span>
             <h3>Brincadeiras e alegria</h3>
             <p>Jogos, desenhos, música e conversa: momentos simples que devolvem autoestima e lembram à criança que ela não está sozinha.</p>
           </article>
-          <article class="causa-pilar glass-3d" data-reveal data-reveal-delay="120">
-            <span class="causa-pilar-icone" aria-hidden="true">03</span>
+          <article class="causa-pilar cartao-autoral" data-reveal data-reveal-delay="120">
+            <span class="causa-pilar-icone" aria-hidden="true">Estar</span>
             <h3>Presença que acolhe</h3>
             <p>Escutar a família, brincar junto e estar de verdade — sem pressa. É isso que transforma uma visita em memória boa.</p>
           </article>
@@ -158,7 +163,7 @@
         </div>
 
         <div class="destaque-box glass-3d causa-cta" data-reveal data-tilt>
-          <p><strong>Seu tempo importa.</strong> Inscreva-se e ajude a semear futuro em cada visita.</p>
+          <p><strong>Você pode ser parte disso.</strong> Cada inscrição é mais uma semente — junte-se às visitas do Semear Futuro.</p>
           <a href="#inscricao" class="btn btn-primario">
             <span>Quero voluntariar</span>
             <span class="btn-seta" aria-hidden="true">→</span>
@@ -176,8 +181,8 @@
           <p><strong>Voluntariado</strong> é dedicar tempo, talento e solidariedade sem remuneração — e, no Semear Futuro, isso vira <strong>visitas, doações e brincadeiras</strong> para crianças que mais precisam de acolhimento.</p>
           <p>A <strong>ONU declarou 2026</strong> o Ano Internacional dos Voluntários para o Desenvolvimento Sustentável, alinhado aos Objetivos de Desenvolvimento Sustentável (ODS).</p>
         </div>
-        <div class="destaque-box glass-3d" data-reveal data-tilt>
-          <p>O <strong>Semear Futuro</strong> responde a esse chamado com ações concretas de apoio à infância em vulnerabilidade — e você pode fazer parte.</p>
+        <div class="destaque-box cartao-autoral" data-reveal>
+          <p class="frase-destaque">Em 2026, a ONU celebra o voluntariado — e nós respondemos com <strong>lares visitados, mãos estendidas e sorrisos compartilhados</strong>.</p>
         </div>
       </div>
     </section>
@@ -267,7 +272,7 @@
       <div class="container">
         <span class="secao-kicker" data-reveal>O projeto em ação</span>
         <h2 class="titulo-secao" data-reveal>Semear Futuro em ação</h2>
-        <p class="subtitulo-secao" data-reveal>Visitas, doações, brincadeiras e papel dos voluntários</p>
+        <p class="subtitulo-secao subtitulo-autoral" data-reveal>Assim funciona na prática — do planejamento ao abraço na porta do lar.</p>
 
         <div class="timeline-3d">
           <article class="projeto-item glass-3d" data-reveal data-tilt>
@@ -319,7 +324,7 @@
       <div class="container">
         <span class="secao-kicker" data-reveal>Inscrição</span>
         <h2 class="titulo-secao" data-reveal>Seja voluntário</h2>
-        <p class="subtitulo-secao" data-reveal>Preencha o formulário — dados salvos no seu navegador</p>
+        <p class="subtitulo-secao subtitulo-autoral" data-reveal>Conte como quer ajudar. Seus dados ficam salvos só neste navegador, com carinho e privacidade.</p>
 
         <div id="msgJaInscrito" class="mensagem-aviso glass" role="status"></div>
         <div id="msgSucesso" class="mensagem-sucesso glass" role="status"></div>
@@ -369,8 +374,8 @@
     <section id="desenvolvedor" class="secao secao-escura">
       <div class="container">
         <span class="secao-kicker" data-reveal>Autoria do site</span>
-        <h2 class="titulo-secao" data-reveal>Desenvolvedor do site</h2>
-        <div class="dev-panel dev-panel-simples glass-3d" data-reveal>
+        <h2 class="titulo-secao" data-reveal>Quem criou este site</h2>
+        <div class="dev-panel dev-panel-simples cartao-autoral" data-reveal>
           <figure class="dev-foto">
             <img
               src="images/ana-flavia-avatar.png"
@@ -382,13 +387,14 @@
           </figure>
           <div class="dev-info">
             <p class="dev-nome">Ana Flávia</p>
-            <p class="dev-meta">Trabalho individual · Desenvolvimento Web</p>
+            <p class="dev-meta">Autora do projeto digital</p>
             <div class="tech-tags">
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
             </div>
-            <p class="dev-desc">Site do projeto Semear Futuro desenvolvido para a aula de Desenvolvimento Web.</p>
+            <blockquote class="dev-frase">“Fiz este site para que o Semear Futuro tenha um lar na internet — claro, acolhedor e pronto para receber voluntários.”</blockquote>
+            <p class="dev-desc">Ana Flávia · trabalho individual · Desenvolvimento Web · Colégio Paulo de Tarso, 2026.</p>
           </div>
         </div>
       </div>
@@ -396,10 +402,11 @@
   </main>
 
   <footer class="rodape">
+    <p class="rodape-lema"><span aria-hidden="true">✦</span> Semear Futuro — cada visita, uma semente</p>
     <p><strong>Semear Futuro</strong> · Voluntariado 2026</p>
-    <p>Projeto da Colégio Paulo de Tarso — Rua Mazzini, 61, Aclimação, São Paulo — SP</p>
-    <p class="rodape-nota">Site feito com HTML, CSS e JavaScript</p>
-    <p class="rodape-credito">&copy; 2026 · Ana Flávia · Desenvolvimento Web</p>
+    <p>Projeto do Colégio Paulo de Tarso — Rua Mazzini, 61, Aclimação, São Paulo — SP</p>
+    <p class="rodape-nota">Criado com HTML, CSS e JavaScript · identidade autoral do projeto</p>
+    <p class="rodape-credito">&copy; 2026 · Ana Flávia</p>
   </footer>
 
   <script src="script.js"></script>
