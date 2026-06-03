@@ -2,6 +2,8 @@
 
 Projeto de Desenvolvimento Web da **Colégio Paulo de Tarso**: site sobre voluntariado em favor de crianças em situação de vulnerabilidade.
 
+Repositório: https://github.com/hzy1kk/Projeto-Semear-AnaFlavia
+
 ## Arquivos
 
 - `index.html` — estrutura e conteúdo
